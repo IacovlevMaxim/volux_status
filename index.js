@@ -1,6 +1,6 @@
 const { Client } = require('discord-rpc');
 
-const client = new Client({ transport: 'ipc' });
+const client = new Client({ transport: 'ipc' })
 
 client.on('ready', () => {
     client.request('SET_ACTIVITY', {
@@ -15,7 +15,8 @@ client.on('ready', () => {
                 { label: "Join Team Volux!", url: "https://discord.gg/QZPW4zG" },
             ]
         }
-    }); 
+    })
+    .catch(console.error)
     console.log("Status is ready to use!");
 });
 
